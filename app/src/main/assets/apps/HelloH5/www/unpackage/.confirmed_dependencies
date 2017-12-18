@@ -1,0 +1,63 @@
+{
+	"index.html": {
+		"resources": [
+			"css/rem.exclude.min.css",
+			"css/components-index.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/jquery-2.0.3.min.js",
+			"css/mui.min.css",
+			"myzt.html"
+		],
+		"refer": [
+			"myzt.html",
+			"xtjh.html"
+		]
+	},
+	"myzt.html": {
+		"resources": [
+			"css/layout-b.css",
+			"css/promo.css"
+		]
+	},
+	"xtjh.html": {
+		"resources": [
+			"css/rem.exclude.min.css",
+			"css/components-index.css",
+			"layer/mobile/layer.js",
+			"fonts/mui.ttf",
+			"layer/mobile/need/layer.css",
+			"css/mui.min.css",
+			"js/hos.js"
+		],
+		"refer": [
+			"xthf.html",
+			"xtjl.html",
+			"searhDevice.html"
+		]
+	},
+	"xthf.html": {
+		"resources": [
+			"css/rem.exclude.min.css",
+			"css/components-index.css",
+			"layer/mobile/need/layer.css",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"xtjl.html"
+		]
+	},
+	"xtjl.html": {
+		"resources": [
+			"css/rem.exclude.min.css",
+			"css/components-index.css",
+			"layer/mobile/need/layer.css",
+			"css/mui.min.css"
+		]
+	},
+	"searhDevice.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	}
+}

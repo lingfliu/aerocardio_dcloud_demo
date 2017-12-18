@@ -1,0 +1,62 @@
+/*样式初始化*/
+body{margin:0;padding:0;background-color:#fff;font-family:"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,iframe,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+fieldset,img{border:0}
+img{vertical-align:top}
+.infm-textx img{width:100%}
+address,caption,cite,dfn,em,th,var{font-style:normal;font-weight:400}
+ol,ul{list-style:none}
+a{text-decoration:none}
+a:hover{text-decoration:none}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+button,input,select{font:100% tahoma,\5b8b\4f53,arial;vertical-align:baseline}
+input[type=checkbox],input[type=radio]{vertical-align:middle;}
+input{border:0;-webkit-appearance: none;}
+textarea{overflow:auto;font:100% tahoma,\5b8b\4f53,arial}
+table{border-collapse:collapse;border-spacing:0}
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none!important;margin:0;border: 0;}
+article,aside,audio,details,figcaption,figure,footer,header,mark,menu,nav,section,summary,time,video{display:block;margin:0;padding:0}
+audio,canvas,video{display:inline-block}
+mark,time{display:inline}
+mark{background-color:#ff0;color:#000}
+audio:not([controls]){display:none;height:0}
+.clearfix:after,.clearfix:before{content:"";display:block;height: 0;clear: both;}
+ul{padding:0;margin:0;list-style:none}
+.fl{float: left;}
+.fr{float: right;}
+html,body{min-height: 100%;}
+/*登录注册部分*/
+.login_wrap{width: 100%;background: #FFFFFF;overflow: hidden;min-height: 100%;}
+.login_logo{margin-top: 100px;text-align: center;}
+.logo_title{margin-top:10px ;font-size: 12px;color: #a8aab7;text-align: center;}
+.login_btn{display: block;width: 80%;margin: 0 auto;height: 46px;line-height: 46px;margin-top: 60px;
+font-size: 14px;color: #FFFFFF;text-align: center;background-color: #3f86ff;border-radius: 23px;
+-webkit-border-radius: 23px;-moz-border-radius: 23px;}
+.reg_btn{display: block;width: 80%;margin: 0 auto;height: 46px;line-height: 46px;margin-top: 25px;
+font-size: 14px;color: #007aff;border:2px solid #3f86ff;text-align: center;
+background-color: #FFFFFF;border-radius: 23px;-webkit-border-radius: 23px;-moz-border-radius: 23px;}
+.login_tips{position: absolute;bottom: 20px;width: 100%;text-align: center;font-size: 12px;color: #c4c6cf;}
+.login_tips span{color: #707c93;}
+.back_side{margin-top: 30px;margin-bottom: 35px;padding-left: 25px;}
+.back_side em{display: inline-block;width: 14px;height: 14px;background: url(../img/back.png) no-repeat;background-size: 14px;}
+.login_con{width: 80%;margin: 0 auto;overflow: hidden;}
+.pass_t{font-size: 18px;color: #475265;}
+.pass_t span{color: #cdcfd6;margin-left: 25px;}
+.login_main{margin-top: 20px;}
+.login_main p{font-size: 12px;color: #cdcfd6;line-height: 24px;}
+.user_inp{display: block;width: 100%;border-bottom: 1px solid #c4c5ce;padding: 5px 0;}
+.pass_inp{display: block;width: 100%;border-bottom: 1px solid #c4c5ce;padding: 5px 20px 5px 0;
+background: url(../img/pass.png) no-repeat right center;background-size: 20px auto;box-sizing: border-box;}
+.login_btn_in{margin-top: 40px;display: block;width: 100%;height: 46px;line-height: 46px;font-size: 14px;
+color: #FFFFFF;text-align: center;background-color: #d1d3db;border-radius: 23px;-webkit-border-radius: 23px;-moz-border-radius: 23px;}
+.forget{margin-top: 20px;text-align: center;}
+.forget a{font-size: 14px;color: #838fa4;}
+.reg_con{width: 80%;margin: 0 auto;overflow: hidden;}
+.reg_zc{font-size: 18px;color: #:;;}
+.reg_tel{margin-top: 14px;font-size: 18px;color: #647184;}
+.reg_main{margin-top: 20px;}
+.reg_main p{font-size: 12px;color: #cdcfd6;line-height: 24px;}
+.reg_btn_in{margin-top: 40px;display: block;width: 100%;height: 46px;line-height: 46px;font-size: 14px;
+color: #FFFFFF;text-align: center;background-color: #d1d3db;border-radius: 23px;-webkit-border-radius: 23px;-moz-border-radius: 23px;}

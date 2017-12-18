@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>心电监测</title>
+		<meta name="keywords" content="在线咨询,健康资讯,医院挂号,医院预约,专家门诊">
+		<meta name="description" content="提供预约挂号,在线诊疗,电子处方,在线配药全方位服务。">
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="css/rem.exclude.min.css">
+		<link rel="stylesheet" href="css/components-index.css" type="text/css">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<script src="js/hos.js"></script>
+		<script src="js/jquery-2.0.3.min.js"></script> <!-- 你必须先引入jQuery1.8或以上版本 -->
+  		<script src="layer/mobile/layer.js"></script>
+		<script src="./js/common.js"></script>
+		<script src="./js/test.js"></script>
+		<script>
+			mui.init()
+			var useREM = Object.create({
+				resize: function() {
+					var config = this.config
+					var scale = this.getScale()
+					this.size = Math.max(config.min, Math.min(config.max, document.documentElement.clientWidth)) / config.num / scale
+					this.style.innerHTML = "html{font-size: " + this.size + "px !important;}"
+					return this
+				},
+				set: function(newConfig) {
+					if(newConfig) {
+						for(var a in newConfig) {
+							if(this.config.hasOwnProperty(a)) {
+								this.config[a] = newConfig[a]
+							}
+						}
+					}
+					this.resize()
+					return this
+				},
+				init: function() {
+					this.style = document.head.appendChild(document.createElement("style"))
+
+					var timer
+					window.addEventListener("resize", function() {
+						clearTimeout(timer)
+						timer = setTimeout(this.resize.bind(this), this.config.delay)
+					}.bind(useREM))
+
+					if(navigator.userAgent.indexOf("Android") > -1) {
+						window.addEventListener("DOMContentLoaded", function() {
+							useREM.resize()
+						})
+					}
+
+					useREM.resize()
+				},
+				// 安卓手机调整手机字号，会导致字体渲染被放大
+				getScale: function() {
+					if(document.readyState === 'loading') {
+						return 1
+					}
+					var clientWidth = document.documentElement.clientWidth
+					var size = clientWidth / 16
+					var p = document.body.appendChild(document.createElement("p"))
+					// 不同的基准字号放大的倍数不一样，比如 16px 放大 1.1 倍，24px 放大 1.2 倍，所以需要先计算rem布局会使用大多的字号
+					p.style.cssText = "width: 16em;font-size: " + size + "px;"
+					var scale = p.offsetWidth / clientWidth
+					document.body.removeChild(p)
+					return scale
+				}
+			}, {
+				style: {
+					value: null,
+					writable: true,
+					configurable: false,
+					enumerable: true
+				},
+				size: {
+					value: 20,
+					writable: true,
+					configurable: false,
+					enumerable: true
+				},
+				config: {
+					value: {
+						max: 640,
+						min: 320,
+						num: 16,
+						delay: 100
+					},
+					writable: false,
+					configurable: false,
+					enumerable: true
+				}
+			})
+			useREM.init()
+		</script>
+		<!--<style>html{font-size: 20px !important;}</style>-->
+
+		<script type="text/javascript">
+			// 图片加载 资源不存在问题
+			// 实现1px的边框(iOS 8)
+			if(/iP(hone|od|ad)/.test(navigator.userAgent)) {
+				var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+					version = parseInt(v[1], 10);
+				if(version >= 8) {
+					document.documentElement.classList.add('hairlines');
+				}
+			}
+
+			window.NoFind = function(src) {
+				var img = event.srcElement;
+				img.src = src;
+				img.onerror = null;
+			}
+		</script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title"></h1>
+		</header>
+		<div class="gp GJ_Gp gp-homepage-new" style="padding-bottom: 61px;">
+
+			<div class="slide" id="J_SlideSearch">
+				
+				<section class="top-slider">
+					<div class="swiper-container swiper-container-horizontal">
+						<ul class="swiper-wrapper" style=" ">
+							<li class="swiper-slide swiper-slide-duplicate" style="width: 640px;" data-swiper-slide-index="5">
+								<a href="">
+									<img class="swiper-lazy" src="https://kano.guahao.cn/Jow21799516?resize=750-336&amp;webp=80">
+								</a>
+							</li>
+						</ul>
+						<!--<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>-->
+					</div>
+				</section>
+			</div>
+			<ul id="a">
+
+				
+			</ul>
+			<div class="home-entry">
+				<div class="container">
+					<a  onclick="myzt_method()" >
+						
+						<img class="icon" src="https://h2img.guahao.com/h5/img/components/index/yygh0707.png">
+						<p class="title">开始监测</p>
+						
+					</a>
+				</div>	
+			</div>
+			<div class="home-entry">
+				<hr></hr>
+			</div>
+			<div class="home-entry">
+				<div class="container">
+					<a  href=" #" >
+						<p class="title">心率[bpm]<br>---/---</p>						
+					</a>
+					<a href="#">						
+						<p class="title">呼吸[bpm]<br>---</p>						
+					</a>
+					<a href="#">						
+						<p class="title">健康指数[%]<br>---</p>
+					</a>									
+				</div>	
+			</div>
+			<div class="home-entry">
+				<div id="canvas">
+  					<canvas id="can">Canvas画板</canvas>
+				</div>
+			</div>
+									
+			<div class="link-modal" style="display: none;">
+				<div class="content">
+					<a class="link">
+						<img class="img">
+					</a>
+					<a class="close" href="javascript:;"></a>
+				</div>
+			</div>
+		</div>
+
+		<div style="display: none;">
+			<script id="J_TopSliderTmpl" type="text/html">
+				<section class="top-slider" :class="{'top-slider-single': list.length <= 1}">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide" v-for="(index, item) in list">
+								<a>
+									<img class="swiper-lazy">
+									<!-- <span class="swiper-lazy-preloader"></span> -->
+								</a>
+							</li>
+						</ul>
+						<div class="swiper-pagination"></div>
+					</div>
+				</section>
+			</script>
+			
+			<script id="J_CustomEntryTmpl" type="text/html">
+				<section class="custom-entry" v-if="list.length > 3">
+					<a class="entry" :href="item.confUrl" v-for="item in list">
+						<img :src="item.image" onerror="this.style.display='none';" onload="this.style.display='';">
+					</a>
+				</section>
+			</script>
+			<script id="J_HealthCloudTmpl" type="text/html">
+				<div class="health-cloud">
+					<div class="wrap">
+						<div class="item">
+							<a>
+								<img onerror="this.style.display='none';" onload="this.style.display='';">
+							</a>
+						</div>
+					</div>
+				</div>
+			</script>
+			
+			
+			<script id="J_HealthArticleTmpl" type="text/html">
+				<section class="health-article">
+					<div class="title" v-show="channel.length > 0">
+						<nav>
+							<a href="javascript:;"></a>
+							<a :href="getMoreLink" class="more"></a>
+						</nav>
+					</div>
+					<div class="article-list">
+						<ul>
+							<li v-for="(index, item) in articles">
+								<a href="#">
+									<img>
+									<h3 v-text="item.title"></h3>
+									<div class="summary" v-text="item.digest"></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</script>
+			<script id="J_LinkModal" type="text/html">
+				<div class="link-modal" v-show="popup.show">
+					<div class="content">
+						<a class="link" :href="popup.href">
+							<img class="img" />
+						</a>
+						<a class="close" href="javascript:;"></a>
+					</div>
+				</div>
+			</script>
+			
+			<script id="J_SnsHelpHomeTmpl" type="text/html">
+				<section class="sns-help">
+					<a class="sns-help-box">
+						<img src="https://h2img.guahao.com/h5/img/components/index/sns-help-home@3x.png" alt="">
+						<section class="help-question-msg">
+							<span class="d-reply-counts"></span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+							<span v-html="snsHelpData.content"></span>
+						</section>
+					</a>
+				</section>
+			</script>
+			<script id="J_BetterChoiceTmpl" type="text/html">
+				<section class="better-choice">
+					<img src="https://h2img.guahao.com/h5/img/components/index/better-choice0707.png?v=20170925">
+					<a href="#" class="link1"></a>
+					<a href="#" class="link2"></a>
+					<a href="#" class="link3"></a>
+				</section>
+			</script>
+			<script id="J_CloudHospitalTmpl" type="text/html">
+				<section class="cloud-hospital">
+					<a :href="locals.guahaoServer + '/hd/22015'">
+						<img class="img" src="https://h2img.guahao.com/h5/img/components/index/ylt0707.png?v=1510828288a4e1e0">
+					</a>
+				</section>
+			</script>
+		</div>
+
+		<footer id="gf" class="g-grid-d">
+			<a class="g-block on"  onclick="xtjc_method()" id="jc">
+				<i class="g-icon wy"></i> 监测
+			</a>
+			<a class="g-block "  onclick="xthf_method()" id="hf">
+				<i class="g-icon yanxuan"></i>回放				
+			</a>
+			<a class="g-block "  onclick="xtjl_method()" id="jl">
+				<i class="g-icon community"></i> 记录
+			</a>
+			<a class="g-block " href="#">
+				<i class="g-icon find"></i> 贴士
+			</a>
+			<a class="g-block " href="#">
+				<i class="g-icon my"></i> 更多
+			</a>
+		</footer>
+		<script type="text/javascript">
+				mui.init();
+				document.addEventListener('plusready',function(){
+				// Android处理返回键
+				plus.key.addEventListener('backbutton',function(){
+						plus.runtime.quit();
+				},false);
+				},false);
+				function myzt_method(){
+					//alert(22);
+				 	plus.plugintest.PluginTestFunction("Html5","Plus","AsyncFunction","MultiArgument!", function( result ) {alert( result[0]  + "_" + result[1]  + "_" + result[2]  + "_" + result[3] );},function(result){alert(result)});
+					//mui.openWindow('xtjh.html');
+				}
+				function xthf_method(){  
+					mui.openWindow('xthf.html');
+					//var bb = document.getElementById('hf');
+					//bb.class='g-block on';
+				}
+				function xtjl_method(){  
+					mui.openWindow('xtjl.html'); 
+					//var cc = document.getElementById('jl');
+					//cc.class='g-block on';
+				}
+				function test(cnt) {
+				alert(cnt);
+				}
+		</script>
+	</body>
+
+</html>
